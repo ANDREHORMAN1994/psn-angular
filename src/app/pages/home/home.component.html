@@ -1,8 +1,10 @@
 <div class="home__container">
-	<app-card
-		gameCover="/assets/bt-1.jpg"
-		label="Exclusive"
-		type="Digital PS4"
-		price="R$ 399,00"
-	/>
+  <ng-container *ngFor="let game of games">
+    <app-card
+      [gameCover]="game.url"
+      [label]="game.label"
+      [type]="game.type"
+      [price]="game.price"
+    />
+  </ng-container>
 </div>
